@@ -1,0 +1,12 @@
+<h1> {{title}}</h1>
+
+@if (userLoggedIn){
+     <h2>User Ramu</h2>
+} @else {
+  <h2>user unknown</h2>
+}
+
+<button [disabled]="btndisabled"> Form sumbit</button>
+<app-pagetitle [parentTitle]="title"></app-pagetitle>
+
+<app-count (onIncrement)="handlingIncrement()" [count] ="count"></app-count>
